@@ -1,0 +1,77 @@
+name: habitflow
+description: HabitFlow - Premium Habit & Task Manager
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Navigation
+  go_router: ^14.2.7
+
+  # Local Database
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Notifications
+  flutter_local_notifications: ^17.2.2
+
+  # Charts
+  fl_chart: ^0.69.0
+
+  # Calendar
+  table_calendar: ^3.1.2
+
+  # Fonts
+  google_fonts: ^6.2.1
+
+  # Internationalization
+  intl: ^0.19.0
+
+  # UUID
+  uuid: ^4.4.2
+
+  # Slidable
+  flutter_slidable: ^3.1.0
+
+  # Shared Preferences
+  shared_preferences: ^2.3.2
+
+  # Permissions
+  permission_handler: ^11.3.1
+
+  # Home Screen Widget
+  home_widget: ^0.9.0
+
+  # Icons
+  cupertino_icons: ^1.0.8
+  flutter_timezone: ^5.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon.jpg"
+  web:
+    generate: true
+    image_path: "assets/images/app_icon.jpg"
+    background_color: "#000000"
+    theme_color: "#000000"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/

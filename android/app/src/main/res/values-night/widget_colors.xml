@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light mode overrides for widget colors -->
+    <color name="widget_background">#FFF5F5F5</color>
+    <color name="widget_surface">#FFFFFFFF</color>
+    <color name="widget_surface_elevated">#FFF0F0F0</color>
+
+    <color name="widget_text_primary">#FF111111</color>
+    <color name="widget_text_secondary">#99000000</color>
+    <color name="widget_text_tertiary">#55000000</color>
+
+    <color name="widget_accent">#FF6C63FF</color>
+    <color name="widget_accent_alpha">#226C63FF</color>
+
+    <color name="progress_track">#FFE0E0E0</color>
+    <color name="widget_divider">#22000000</color>
+    <color name="task_completed">#55000000</color>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HabitFlow</string>
+    <string name="widget_description">Today\'s tasks and habit tracker at a glance</string>
+    <string name="widget_label_small">HabitFlow Small</string>
+    <string name="widget_label_medium">HabitFlow Medium</string>
+    <string name="widget_label_large">HabitFlow Large</string>
+    <string name="widget_no_tasks">No pending tasks today</string>
+    <string name="widget_no_habits">No habits for today</string>
+    <string name="widget_tap_to_open">Tap to open HabitFlow</string>
+    <string name="widget_add_task">+ Add Task</string>
+    <string name="widget_tasks_label">Tasks</string>
+    <string name="widget_habits_label">Habits</string>
+    <string name="widget_streak_label">day streak</string>
+    <string name="widget_complete_label">completed</string>
+</resources>

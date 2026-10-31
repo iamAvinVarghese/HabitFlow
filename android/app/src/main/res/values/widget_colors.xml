@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Widget surface colors -->
+    <color name="widget_background">#FF1A1A1A</color>
+    <color name="widget_surface">#FF242424</color>
+    <color name="widget_surface_elevated">#FF2E2E2E</color>
+
+    <!-- Text colors -->
+    <color name="widget_text_primary">#FFFFFFFF</color>
+    <color name="widget_text_secondary">#99FFFFFF</color>
+    <color name="widget_text_tertiary">#55FFFFFF</color>
+
+    <!-- Accent -->
+    <color name="widget_accent">#FF6C63FF</color>
+    <color name="widget_accent_alpha">#336C63FF</color>
+
+    <!-- Priority colors -->
+    <color name="priority_high">#FFFF6B6B</color>
+    <color name="priority_medium">#FFFF9F43</color>
+    <color name="priority_low">#FF6BCB77</color>
+
+    <!-- Progress track -->
+    <color name="progress_track">#FF333333</color>
+
+    <!-- Divider -->
+    <color name="widget_divider">#22FFFFFF</color>
+
+    <!-- Completed task text -->
+    <color name="task_completed">#55FFFFFF</color>
+</resources>

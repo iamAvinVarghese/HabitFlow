@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    widget_large.xml — 4×4 large widget
+    Shows: full task list (5), full habit list (4), progress bar, add task button
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_large_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_background"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <!-- ── App Header ──────────────────────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_app_name_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HabitFlow"
+            android:textColor="@color/widget_accent"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/tv_date_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:textColor="@color/widget_text_tertiary"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/widget_divider" />
+
+    <!-- ── TASKS SECTION ───────────────────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TASKS"
+            android:textColor="@color/widget_text_tertiary"
+            android:textSize="9sp"
+            android:letterSpacing="0.12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_task_summary_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/widget_text_secondary"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <!-- Task rows 1–5 -->
+    <!-- Row 1 -->
+    <LinearLayout android:id="@+id/task_row_l1"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp" android:background="@drawable/widget_row_background"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="8dp" android:visibility="gone">
+        <View android:id="@+id/dot_l1" android:layout_width="7dp" android:layout_height="7dp"
+            android:layout_marginEnd="8dp" android:background="@drawable/widget_button_background"/>
+        <TextView android:id="@+id/title_l1" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="@color/widget_text_primary" android:textSize="12sp"
+            android:maxLines="1" android:ellipsize="end" android:text=""/>
+        <TextView android:id="@+id/time_l1" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/widget_text_tertiary"
+            android:textSize="10sp" android:layout_marginStart="4dp" android:text=""/>
+    </LinearLayout>
+
+    <!-- Row 2 -->
+    <LinearLayout android:id="@+id/task_row_l2"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp" android:background="@drawable/widget_row_background"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="8dp" android:visibility="gone">
+        <View android:id="@+id/dot_l2" android:layout_width="7dp" android:layout_height="7dp"
+            android:layout_marginEnd="8dp" android:background="@drawable/widget_button_background"/>
+        <TextView android:id="@+id/title_l2" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="@color/widget_text_primary" android:textSize="12sp"
+            android:maxLines="1" android:ellipsize="end" android:text=""/>
+        <TextView android:id="@+id/time_l2" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/widget_text_tertiary"
+            android:textSize="10sp" android:layout_marginStart="4dp" android:text=""/>
+    </LinearLayout>
+
+    <!-- Row 3 -->
+    <LinearLayout android:id="@+id/task_row_l3"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp" android:background="@drawable/widget_row_background"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="8dp" android:visibility="gone">
+        <View android:id="@+id/dot_l3" android:layout_width="7dp" android:layout_height="7dp"
+            android:layout_marginEnd="8dp" android:background="@drawable/widget_button_background"/>
+        <TextView android:id="@+id/title_l3" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="@color/widget_text_primary" android:textSize="12sp"
+            android:maxLines="1" android:ellipsize="end" android:text=""/>
+        <TextView android:id="@+id/time_l3" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/widget_text_tertiary"
+            android:textSize="10sp" android:layout_marginStart="4dp" android:text=""/>
+    </LinearLayout>
+
+    <!-- Row 4 -->
+    <LinearLayout android:id="@+id/task_row_l4"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp" android:background="@drawable/widget_row_background"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="8dp" android:visibility="gone">
+        <View android:id="@+id/dot_l4" android:layout_width="7dp" android:layout_height="7dp"
+            android:layout_marginEnd="8dp" android:background="@drawable/widget_button_background"/>
+        <TextView android:id="@+id/title_l4" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="@color/widget_text_primary" android:textSize="12sp"
+            android:maxLines="1" android:ellipsize="end" android:text=""/>
+        <TextView android:id="@+id/time_l4" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/widget_text_tertiary"
+            android:textSize="10sp" android:layout_marginStart="4dp" android:text=""/>
+    </LinearLayout>
+
+    <!-- Row 5 -->
+    <LinearLayout android:id="@+id/task_row_l5"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp" android:background="@drawable/widget_row_background"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="8dp" android:visibility="gone">
+        <View android:id="@+id/dot_l5" android:layout_width="7dp" android:layout_height="7dp"
+            android:layout_marginEnd="8dp" android:background="@drawable/widget_button_background"/>
+        <TextView android:id="@+id/title_l5" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="@color/widget_text_primary" android:textSize="12sp"
+            android:maxLines="1" android:ellipsize="end" android:text=""/>
+        <TextView android:id="@+id/time_l5" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/widget_text_tertiary"
+            android:textSize="10sp" android:layout_marginStart="4dp" android:text=""/>
+    </LinearLayout>
+
+    <!-- No tasks empty state -->
+    <TextView android:id="@+id/tv_no_tasks_large"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/widget_no_tasks" android:textColor="@color/widget_text_tertiary"
+        android:textSize="11sp" android:gravity="center"
+        android:paddingTop="4dp" android:paddingBottom="4dp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/widget_divider" />
+
+    <!-- ── HABITS SECTION ──────────────────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HABITS"
+            android:textColor="@color/widget_text_tertiary"
+            android:textSize="9sp"
+            android:letterSpacing="0.12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_streak_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 day streak"
+            android:textColor="@color/widget_accent"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <!-- Habit progress bar -->
+    <ProgressBar
+        android:id="@+id/progress_habits_large"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginBottom="6dp"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="@color/widget_accent"
+        android:progressBackgroundTint="@color/progress_track"
+        android:indeterminate="false" />
+
+    <!-- Habit rows 1–4 -->
+    <!-- Habit row 1 -->
+    <LinearLayout android:id="@+id/habit_row_l1"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp" android:background="@drawable/widget_row_background"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="8dp" android:visibility="gone">
+        <TextView android:id="@+id/habit_check_l1" android:layout_width="16dp"
+            android:layout_height="16dp" android:text="○" android:textSize="12sp"
+            android:textColor="@color/widget_text_tertiary" android:gravity="center"
+            android:layout_marginEnd="8dp"/>
+        <TextView android:id="@+id/habit_title_l1" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="@color/widget_text_primary" android:textSize="12sp"
+            android:maxLines="1" android:ellipsize="end" android:text=""/>
+        <TextView android:id="@+id/habit_streak_l1" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/widget_accent"
+            android:textSize="10sp" android:text=""/>
+    </LinearLayout>
+
+    <!-- Habit row 2 -->
+    <LinearLayout android:id="@+id/habit_row_l2"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp" android:background="@drawable/widget_row_background"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="8dp" android:visibility="gone">
+        <TextView android:id="@+id/habit_check_l2" android:layout_width="16dp"
+            android:layout_height="16dp" android:text="○" android:textSize="12sp"
+            android:textColor="@color/widget_text_tertiary" android:gravity="center"
+            android:layout_marginEnd="8dp"/>
+        <TextView android:id="@+id/habit_title_l2" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="@color/widget_text_primary" android:textSize="12sp"
+            android:maxLines="1" android:ellipsize="end" android:text=""/>
+        <TextView android:id="@+id/habit_streak_l2" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/widget_accent"
+            android:textSize="10sp" android:text=""/>
+    </LinearLayout>
+
+    <!-- Habit row 3 -->
+    <LinearLayout android:id="@+id/habit_row_l3"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp" android:background="@drawable/widget_row_background"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="8dp" android:visibility="gone">
+        <TextView android:id="@+id/habit_check_l3" android:layout_width="16dp"
+            android:layout_height="16dp" android:text="○" android:textSize="12sp"
+            android:textColor="@color/widget_text_tertiary" android:gravity="center"
+            android:layout_marginEnd="8dp"/>
+        <TextView android:id="@+id/habit_title_l3" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="@color/widget_text_primary" android:textSize="12sp"
+            android:maxLines="1" android:ellipsize="end" android:text=""/>
+        <TextView android:id="@+id/habit_streak_l3" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/widget_accent"
+            android:textSize="10sp" android:text=""/>
+    </LinearLayout>
+
+    <!-- Habit row 4 -->
+    <LinearLayout android:id="@+id/habit_row_l4"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/widget_row_background"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="8dp" android:visibility="gone">
+        <TextView android:id="@+id/habit_check_l4" android:layout_width="16dp"
+            android:layout_height="16dp" android:text="○" android:textSize="12sp"
+            android:textColor="@color/widget_text_tertiary" android:gravity="center"
+            android:layout_marginEnd="8dp"/>
+        <TextView android:id="@+id/habit_title_l4" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:textColor="@color/widget_text_primary" android:textSize="12sp"
+            android:maxLines="1" android:ellipsize="end" android:text=""/>
+        <TextView android:id="@+id/habit_streak_l4" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textColor="@color/widget_accent"
+            android:textSize="10sp" android:text=""/>
+    </LinearLayout>
+
+    <!-- No habits empty state -->
+    <TextView android:id="@+id/tv_no_habits_large"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/widget_no_habits" android:textColor="@color/widget_text_tertiary"
+        android:textSize="11sp" android:gravity="center"
+        android:paddingTop="2dp" android:paddingBottom="2dp"
+        android:visibility="gone" />
+
+    <!-- ── Quick Add Task button ─────────────────────────────────────── -->
+    <TextView
+        android:id="@+id/btn_add_task_large"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/widget_button_background"
+        android:text="@string/widget_add_task"
+        android:textColor="#FFFFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium" />
+
+</LinearLayout>
